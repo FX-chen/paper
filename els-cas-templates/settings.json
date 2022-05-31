@@ -1,0 +1,79 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "grunt.autoDetect": "on",
+    "gulp.autoDetect": "on",
+    "jake.autoDetect": "on",
+    "window.zoomLevel": 2,
+    "workbench.startupEditor": "none",
+
+    "latex-workshop.latex.recipes": [{
+        "name": "xelatex",
+        "tools": [
+            "xelatex"
+        ]
+    },
+    {
+        "name": "xelatex ->bibtex -> xelatex*2",
+        "tools": [
+            "xelatex",
+            "bibtex",
+            "xelatex",
+            "xelatex"
+        ]
+    },
+    {
+        "name": "pdflatex",
+        "tools": [
+            "pdflatex"
+        ]
+    }
+],
+"latex-workshop.latex.tools": [{
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%DOCFILE%"
+        ]
+    }
+],
+"latex-workshop.latex.autoClean.run": "onBuilt",
+"latex-workshop.latex.autoBuild.run": "never",
+"latex-workshop.view.pdf.viewer": "external",
+"latex-workshop.view.pdf.external.command": {
+    "command": "D:/tools/SumatraPDF/SumatraPDF.exe", 
+    "args": [
+        "%PDF%"
+    ]
+},
+
+"latex-workshop.view.pdf.external.synctex": {
+    "command": "C:/Programs/SumatraPDF/SumatraPDF.exe",  //SumatraPDF.exe的实际路径
+    "args": [
+        "-forward-search",
+        "%TEX%",
+        "%LINE%",
+        "%PDF%"
+    ]
+},
+
+}
